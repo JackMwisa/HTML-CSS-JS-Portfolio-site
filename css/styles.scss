@@ -105,7 +105,15 @@ section {
     transform: translateY(-50%);
     align-content: center;
     justify-content: center;
+    
+    .active-btn {
+        background-color: var(--color-secondary)!important;
+        transition: all .4s ease-in-out;
 
+        i {
+            color: var(--color-white);
+        }
+    }
     .control {
         padding: 1rem;
         cursor: pointer;
