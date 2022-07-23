@@ -19,6 +19,8 @@
     --color-grey5: #2a2e35;
     --color-grey6: #12181b;
     --br-sm-2: 14px;
+    --box-shadow-1:0 3px 15px rgba(0,0,0,0.3);
+
 }
 
 
@@ -89,3 +91,41 @@ section {
     display: none;
     transform: translateY(0) scale(1);
 }
+
+
+//controls 
+
+.controls {
+    position: fixed;
+    z-index: 10;
+    top: 50%;
+    right: 3%;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(-50%);
+    align-content: center;
+    justify-content: center;
+
+    .control {
+        padding: 1rem;
+        cursor: pointer;
+        background-color: var(--color-grey4);
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0.7rem 0;
+        box-shadow: var(--box-shadow-1);
+        
+        i {
+            font-size: 1.2rem;
+            color: var(--color-grey2);
+            pointer-events: none;
+        }
+    
+    }
+}
+
+
