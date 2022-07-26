@@ -6,14 +6,16 @@ const allSections = document.querySelector('.main-content')
 
 function pageTransistions(){
     //Button click active class
-
-    for (let i=0, i < sectBtn.length; i++){
+    for (let i = 0; i < sectBtn.length; i++){
         
-        sectBtn[i].addEventListener('click', () = {
+        sectBtn[i].addEventListener('click', function() {
             
-            let currentBtn = document.querySelectorAll('.active-btn'),
-            currentBtn[0].classList = currentBtn[0].className,            
+            let currentBtn = document.querySelectorAll('.active-btn');
+            currentBtn[0].className = currentBtn[0].className.replace('active-btn', ''); 
+            this.className += " active-btn"      
         })
     }
 
 }
+
+pageTransistions();
