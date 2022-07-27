@@ -1,8 +1,14 @@
 
 const sections = document.querySelectorAll('.section');
+
+const pages = document.querySelectorAll('.page')
+
 const sectBtns = document.querySelectorAll('.controls')
+
 const sectBtn = document.querySelectorAll('.control') 
+
 const allSections = document.querySelector('.main-content')
+
 
 function pageTransistions(){
     //Button click active class
@@ -18,24 +24,28 @@ function pageTransistions(){
 
 
     //section active button class
+
     allSections.addEventListener('click', (e) => {
-        const id = e.target.id.dataset;
+        const id = e.target.dataset.id;
 
         if (id){
          //remove selected from other buttons
+         
             sectBtns.forEach((btn) => {
-                btn.classList.remove('active')
-           })
-           e.target.classList.add('active')
+            btn.classList.remove('active')
+        
+        })
+            e.target.classList.add('active');
 
         //hiding unselected sections
 
-            sections.forEach((section ) => {
-                sections.classList.remove('active')
-            })
+            sections.forEach((section) => {
+            sections.classList.remove('active')
+        
+        })
 
-        const element = document.getElementById(id);
-        element.classList.add('active');
+            const element = document.getElementById(id);
+            element.classList.add('active');
 
         }
     })
